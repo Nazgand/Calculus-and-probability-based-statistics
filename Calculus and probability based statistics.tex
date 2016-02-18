@@ -1,0 +1,63 @@
+
+\documentclass[10pt]{amsart}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[thm]{Remark}
+
+\numberwithin{equation}{section}
+
+\newcommand{\R}{\mathbb{R}} % The real numbers.
+\newcommand{\dd}[1]{\mathrm{d}#1}
+
+\begin{document}
+
+\title{Calculus and probability based statistics}
+
+\author{Mark Andrew Gerads}
+\date{\today}
+\address{
+318 Thomas Drive\\
+Marshalltown, Iowa, 50158
+}
+\email{MGerads11@winona.edu\\nazgand@gmail.com}
+\maketitle
+\section{Finite Statistics}
+The purpose of this text is to have statistics built on a solid foundation of probability and calculus.
+\definition{$A$ is a repeatable event.}
+\definition{$p$ is the probability that $A$ will happen when $A$ is given a chance to happen. For simplicity, we assume that $p$ is the same every time $A$ is given a chance to happen.}
+\definition{$n\in\mathbb{W}$ is the number of times $A$ had a chance to happen.}
+\definition{$k\in\mathbb{W}$ is the number of times $A$ actually happened.}
+\remark{$k\leq n$.}
+\definition{$f_p$ is the probability is the probability distribution for $p$.}
+\remark{\label{IntegrateToUnity}$1=\int_0^1 f_p \dd p$}
+\definition{$(a,b)$ is the prediction interval of $p$ such that $b-a$ is minimized.}
+\definition{$c$ is the desired certainty for the prediction interval of $p$.}
+\remark{$0\leq c=\int_a^b f_p \dd p\leq 1$}
+\remark{$0\leq a\leq b\leq 1$}
+
+
+Now that we have the definitions, here is the problem: $n,k,c$ are known, and we must solve for $a,b$.
+\remark{The probability of $k$ events given $n$ chances is $\binom{n}{k}p^k(1-p)^{n-k}$, but we must scale it to satisfy \ref{IntegrateToUnity}:
+\begin{equation}
+f_p
+=\frac{\binom{n}{k}p^k(1-p)^{n-k}}{\int\limits_{0}^{1}\binom{n}{k}p^k(1-p)^{n-k}\dd p}
+=\frac{p^k(1-p)^{n-k}}{\int\limits_{0}^{1}p^k(1-p)^{n-k}\dd p}
+=(n+1)\binom{n}{k}p^k(1-p)^{n-k}
+\end{equation}
+}
+
+\end{document}
