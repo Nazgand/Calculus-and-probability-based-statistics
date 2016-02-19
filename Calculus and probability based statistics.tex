@@ -1,5 +1,5 @@
 
-\documentclass[10pt]{amsart}
+\documentclass[8pt]{amsart}
 
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -35,7 +35,8 @@ Marshalltown, Iowa, 50158
 }
 \email{MGerads11@winona.edu\\nazgand@gmail.com}
 \maketitle
-\section{Finite Statistics}
+\section{Finite statistics}
+\subsection{Introduction}
 The purpose of this text is to have statistics built on a solid foundation of probability and calculus.
 \definition{$A$ is a repeatable event.}
 \definition{$p$ is the probability that $A$ will happen when $A$ is given a chance to happen. For simplicity, we assume that $p$ is the same every time $A$ is given a chance to happen.}
@@ -59,5 +60,52 @@ f_p
 =(n+1)\binom{n}{k}p^k(1-p)^{n-k}
 \end{equation}
 }
+\subsection{The 4 cases of finding the interval}
+
+\subsubsection{Case $n=k=0$}
+This case is self-symmetrical.
+\remark{We have \begin{equation}
+(a,b)=\left(\frac{1-c}{2},\frac{1+c}{2}\right)
+\end{equation}}
+
+\subsubsection{Case $n>k=0$}
+\label{Symetry 1A}
+This case is symmetrical to case \ref{Symetry 1B}.
+\remark{We can solve \begin{equation}
+\int_a^1 (k+1)p^k \dd p=c=1-a^{k+1}
+\end{equation}}
+\remark{We have \begin{equation}
+	(a,b)=\left((1-c)^\frac{1}{k+1},1\right)
+	\end{equation}}
+
+\subsubsection{Case $n=k>0$}
+\label{Symetry 1B}
+This case is symmetrical to case \ref{Symetry 1A}.
+\remark{We can solve \begin{equation}
+	\int_0^b (k+1)(1-p)^{n-k} \dd p=c=\frac{(k+1) \left((1-b)^{-k+n+1}-1\right)}{k-n-1}
+	\end{equation}}
+\remark{We have \begin{equation}
+	(a,b)=\left(0,1-\left(\frac{c(k-n-1)}{k+1}+1\right)^\frac{1}{-k+n+1}\right)
+	\end{equation}}
+
+\subsubsection{Case $n>k>0$}
+This case is self-symmetrical.
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
