@@ -45,6 +45,7 @@ The purpose of this text is to have statistics built on a solid foundation of pr
 \remark{$k\leq n$.}
 \definition{$f_p$ is the probability is the probability distribution for $p$.}
 \remark{\label{IntegrateToUnity}$1=\int_0^1 f_p \dd p$}
+\definition{$m$ is the maximum value of $f_p$.}
 \definition{$(a,b)$ is the prediction interval of $p$ such that $b-a$ is minimized.}
 \definition{$c$ is the desired certainty for the prediction interval of $p$.}
 \remark{$0\leq c=\int_a^b f_p \dd p\leq 1$}
@@ -90,13 +91,24 @@ This case is symmetrical to case \ref{Symetry 1A}.
 
 \subsubsection{Case $n>k>0$}
 This case is self-symmetrical.
-\remark{We can solve \begin{equation}
-	\int_a^b (n+1)\binom{n}{k}p^k(1-p)^{n-k} \dd p=c
-	\end{equation}}
-\remark{We have \begin{equation}
-	(a,b)=\left(?,?\right)
-	\end{equation}}
-
+\remark{We desire to solve \begin{equation}
+	\int_a^b (n+1)\binom{n}{k}p^k(1-p)^{n-k} \dd p=c=(n+1)\binom{n}{k}\left(B_b(k+1,-k+n+1)-B_a(k+1,-k+n+1)\right)
+	\end{equation} where $B$ is the incomplete beta function.
+}
+\remark{
+ We can use the hint
+	\begin{equation}
+	a^k(1-a)^{n-k}=b^k(1-b)^{n-k}
+	\end{equation}
+}
+\remark{
+	By solving \begin{equation}
+	\frac{\partial f_p}{\partial p}=0
+	\end{equation}, we get \begin{equation}
+	\lim_{c\rightarrow 0}(a,b)=\left(\frac{k}{n},\frac{k}{n}\right),
+	m=(n+1)\binom{n}{k}\left(\frac{k}{n}\right)^k\left(1-\frac{k}{n}\right)^{n-k}
+	\end{equation}
+}
 \end{document}
 
 
