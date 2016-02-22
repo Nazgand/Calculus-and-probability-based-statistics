@@ -1,0 +1,40 @@
+Note: this is failed code, but someone might be able to get it to work with modification.
+
+FindAB[n_, k_, c_, precision_] :=
+   Module[{
+     a = (1 - c)*k/n*N[1, precision],
+     b = k/n + c*(1 - k/n)*N[1, precision],
+     bnk = Binomial[n, k],
+     Intfab, fpa, fpb, Dfpa, Dfpb
+     },
+    Print["a=", a];
+    fpa = (1 - a )^(-k + n) a^k (1 + n) bnk;
+      fpb = (1 - b )^(-k + n) b^k (1 + n) bnk;
+        Intfab = (1 + 
+            n) Re[(-Beta[a, 1 + k, 1 - k + n] + 
+             Beta[b, 1 + k, 1 - k + n]) ] bnk;
+        While[c != Intfab || fpa != fpb,
+         Dfpa = -(1 - 
+             a )^(-1 - k + n) a^(-1 + k) (1 + n) (-k + a n) bnk;
+            
+            Dfpb = -(1 - 
+                b )^(-1 - k + n) b^(-1 + k) (1 + n) (-k + b n) bnk;
+               
+               a = Max[
+                 a - (Dfpb fpa - Dfpb fpb + 2 fpa fpb - 2 fpb^2 - 
+                   2 Dfpb (c - Intfab))/(
+                  2 (Dfpa Dfpb - Dfpb fpa + Dfpa fpb)), 0];
+               
+               b = Min[
+                 b - (Dfpa fpa - 2 fpa^2 - Dfpa fpb + 2 fpa fpb + 
+                   2 Dfpa (c - Intfab))/(
+                  2 (-Dfpa Dfpb + Dfpb fpa - Dfpa fpb)), 1];
+               fpa = (1 - a )^(-k + n) a^k (1 + n) bnk;
+                 fpb = (1 - b )^(-k + n) b^k (1 + n) bnk;
+                   
+                   Intfab = (1 + 
+                    n) Re[(-Beta[a, 1 + k, 1 - k + n] + 
+                    Beta[b, 1 + k, 1 - k + n])] bnk
+                   ]
+ {a, b}
+ ]
