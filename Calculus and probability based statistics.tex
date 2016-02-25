@@ -39,21 +39,21 @@ Marshalltown, Iowa, 50158
 \section{Finite statistics}
 \subsection{Introduction}
 The purpose of this text is to have statistics built on a solid foundation of probability and calculus.
-\definition{$A$ is a repeatable event.}
-\definition{$p$ is the probability that $A$ will happen when $A$ is given a chance to happen. For simplicity, we assume that $p$ is the same every time $A$ is given a chance to happen.}
+\definition{$A$ is an independently repeatable event.}
+\definition{$p\in[0,1]$ is the probability that $A$ will happen when $A$ is given a chance to happen. For simplicity, we assume that $p$ is the same every time $A$ is given a chance to happen.}
 \definition{$n\in\mathbb{W}$ is the number of times $A$ had a chance to happen.}
 \definition{$k\in\mathbb{W}$ is the number of times $A$ actually happened.}
 \remark{$k\leq n$.}
-\definition{$f_p$ is the probability is the probability distribution for $p$.}
+\definition{$f_p$ is the probability distribution for $p$.}
 \remark{\label{IntegrateToUnity}$1=\int_0^1 f_p \dd p$}
-\definition{$m$ is the maximum value of $f_p$.}
-\definition{$(a,b)$ is the prediction interval of $p$ such that $b-a$ is minimized.}
-\definition{$c$ is the desired certainty for the prediction interval of $p$.}
+\remark{$k/n$ is the expected probability of $p$ and is the maximum value of the function $f_p$. }
+\definition{$(a,b)$ is the confidence interval of $p$ such that $b-a$ is minimized.}
+\definition{$c$ is the desired certainty for the confidence interval of $p$.}
 \remark{$0\leq c=\int_a^b f_p \dd p\leq 1$}
 \remark{$0\leq a\leq b\leq 1$}
 
-
-Now that we have the definitions, here is the problem: $n,k,c$ are known, and we must solve for $a,b$.
+\subsection{The Problem}
+$n,k,c$ are known, and we must solve for $a,b$.
 \remark{The probability of $k$ events given $n$ chances is $\binom{n}{k}p^k(1-p)^{n-k}$, but we must scale it to satisfy \ref{IntegrateToUnity}:
 \begin{equation}
 f_p
@@ -132,36 +132,36 @@ Table with $c=\frac{1}{2}$:\\
 	\hline
 	& $k=0$ & $k=1$ & $k=2$ & $k=3$ & $k=4$ \\
 	\hline
-	$n=0$ & $\begin{array}{c}a = 0.2500000000\\b = 0.7500000000\end{array}$ \\
+	$n=0$ & $\begin{array}{c}a \approx 0.2500000000\\b \approx 0.7500000000\end{array}$ \\
 	\hline
-	$n=1$ & $\begin{array}{c}a = 0.000000000\\b = 0.2928932188\end{array}$ & $\begin{array}{c}a = 0.7071067812\\b = 1.000000000\end{array}$ \\
+	$n=1$ & $\begin{array}{c}a \approx 0.000000000\\b \approx 0.2928932188\end{array}$ & $\begin{array}{c}a \approx 0.7071067812\\b \approx 1.000000000\end{array}$ \\
 	\hline
-	$n=2$ & $\begin{array}{c}a = 0.000000000\\b = 0.2062994740\end{array}$ & $\begin{array}{c}a = 0.326351822\\b = 0.673648178\end{array}$ & $\begin{array}{c}a = 0.7937005260\\b = 1.000000000\end{array}$ \\
+	$n=2$ & $\begin{array}{c}a \approx 0.000000000\\b \approx 0.2062994740\end{array}$ & $\begin{array}{c}a \approx 0.326351822\\b \approx 0.673648178\end{array}$ & $\begin{array}{c}a \approx 0.7937005260\\b \approx 1.000000000\end{array}$ \\
 	\hline
-	$n=3$ & $\begin{array}{c}a = 0.000000000\\b = 0.1591035847\end{array}$ & $\begin{array}{c}a = 0.1966713241\\b = 0.4921993002\end{array}$ & $\begin{array}{c}a = 0.507800700\\b = 0.803328676\end{array}$ & $\begin{array}{c}a = 0.8408964153\\b = 1.000000000\end{array}$ \\
+	$n=3$ & $\begin{array}{c}a \approx 0.000000000\\b \approx 0.1591035847\end{array}$ & $\begin{array}{c}a \approx 0.1966713241\\b \approx 0.4921993002\end{array}$ & $\begin{array}{c}a \approx 0.507800700\\b \approx 0.803328676\end{array}$ & $\begin{array}{c}a \approx 0.8408964153\\b \approx 1.000000000\end{array}$ \\
 	\hline
-	$n=4$ & $\begin{array}{c}a = 0.000000000\\b = 0.1294494367\end{array}$ & $\begin{array}{c}a = 0.1387754454\\b = 0.3894044243\end{array}$ & $\begin{array}{c}a = 0.3594361648\\b = 0.640563835\end{array}$ & $\begin{array}{c}a = 0.610595575\\b = 0.861224555\end{array}$ & $\begin{array}{c}a = 0.8705505633\\b = 1.000000000\end{array}$ \\
+	$n=4$ & $\begin{array}{c}a \approx 0.000000000\\b \approx 0.1294494367\end{array}$ & $\begin{array}{c}a \approx 0.1387754454\\b \approx 0.3894044243\end{array}$ & $\begin{array}{c}a \approx 0.3594361648\\b \approx 0.640563835\end{array}$ & $\begin{array}{c}a \approx 0.610595575\\b \approx 0.861224555\end{array}$ & $\begin{array}{c}a \approx 0.8705505633\\b \approx 1.000000000\end{array}$ \\
 	\hline
-	$n=5$ & $\begin{array}{c}a = 0.000000000\\b = 0.1091012819\end{array}$ & $\begin{array}{c}a = 0.1065967785\\b = 0.3226910840\end{array}$ & $\begin{array}{c}a = 0.2770309506\\b = 0.532125995\end{array}$ & $\begin{array}{c}a = 0.4678740055\\b = 0.722969050\end{array}$ & $\begin{array}{c}a = 0.677308916\\b = 0.893403222\end{array}$ \\
+	$n=5$ & $\begin{array}{c}a \approx 0.000000000\\b \approx 0.1091012819\end{array}$ & $\begin{array}{c}a \approx 0.1065967785\\b \approx 0.3226910840\end{array}$ & $\begin{array}{c}a \approx 0.2770309506\\b \approx 0.532125995\end{array}$ & $\begin{array}{c}a \approx 0.4678740055\\b \approx 0.722969050\end{array}$ & $\begin{array}{c}a \approx 0.677308916\\b \approx 0.893403222\end{array}$ \\
 	\hline
-	$n=6$ & $\begin{array}{c}a = 0.000000000\\b = 0.09427633574\end{array}$ & $\begin{array}{c}a = 0.0862905298\\b = 0.2757178692\end{array}$ & $\begin{array}{c}a = 0.2249291772\\b = 0.4551185682\end{array}$ & $\begin{array}{c}a = 0.3788484407\\b = 0.621151559\end{array}$ & $\begin{array}{c}a = 0.544881432\\b = 0.775070823\end{array}$ \\
+	$n=6$ & $\begin{array}{c}a \approx 0.000000000\\b \approx 0.09427633574\end{array}$ & $\begin{array}{c}a \approx 0.0862905298\\b \approx 0.2757178692\end{array}$ & $\begin{array}{c}a \approx 0.2249291772\\b \approx 0.4551185682\end{array}$ & $\begin{array}{c}a \approx 0.3788484407\\b \approx 0.621151559\end{array}$ & $\begin{array}{c}a \approx 0.544881432\\b \approx 0.775070823\end{array}$ \\
 	\hline
-	$n=7$ & $\begin{array}{c}a = 0.000000000\\b = 0.08299595680\end{array}$ & $\begin{array}{c}a = 0.07237321411\\b = 0.2407853463\end{array}$ & $\begin{array}{c}a = 0.1891248358\\b = 0.3976355162\end{array}$ & $\begin{array}{c}a = 0.3180913474\\b = 0.544067630\end{array}$ & $\begin{array}{c}a = 0.4559323705\\b = 0.681908652\end{array}$ \\
+	$n=7$ & $\begin{array}{c}a \approx 0.000000000\\b \approx 0.08299595680\end{array}$ & $\begin{array}{c}a \approx 0.07237321411\\b \approx 0.2407853463\end{array}$ & $\begin{array}{c}a \approx 0.1891248358\\b \approx 0.3976355162\end{array}$ & $\begin{array}{c}a \approx 0.3180913474\\b \approx 0.544067630\end{array}$ & $\begin{array}{c}a \approx 0.4559323705\\b \approx 0.681908652\end{array}$ \\
 	\hline
-	$n=8$ & $\begin{array}{c}a = 0.000000000\\b = 0.07412528771\end{array}$ & $\begin{array}{c}a = 0.06226629927\\b = 0.2137614499\end{array}$ & $\begin{array}{c}a = 0.1630534052\\b = 0.3530822174\end{array}$ & $\begin{array}{c}a = 0.2740192600\\b = 0.4838784786\end{array}$ & $\begin{array}{c}a = 0.3919638426\\b = 0.608036157\end{array}$ \\
+	$n=8$ & $\begin{array}{c}a \approx 0.000000000\\b \approx 0.07412528771\end{array}$ & $\begin{array}{c}a \approx 0.06226629927\\b \approx 0.2137614499\end{array}$ & $\begin{array}{c}a \approx 0.1630534052\\b \approx 0.3530822174\end{array}$ & $\begin{array}{c}a \approx 0.2740192600\\b \approx 0.4838784786\end{array}$ & $\begin{array}{c}a \approx 0.3919638426\\b \approx 0.608036157\end{array}$ \\
 	\hline
 \end{tabular}
 \begin{tabular}{ |c||c|c|c|c| }
 	\hline
 	& $k=5$ & $k=6$ & $k=7$ & $k=8$ \\
 	\hline
-	$n=5$ & $\begin{array}{c}a = 0.8908987181\\b = 1.000000000\end{array}$ \\
+	$n=5$ & $\begin{array}{c}a \approx 0.8908987181\\b \approx 1.000000000\end{array}$ \\
 	\hline
-	$n=6$ & $\begin{array}{c}a = 0.724282131\\b = 0.913709470\end{array}$ & $\begin{array}{c}a = 0.9057236643\\b = 1.000000000\end{array}$ \\
+	$n=6$ & $\begin{array}{c}a \approx 0.724282131\\b \approx 0.913709470\end{array}$ & $\begin{array}{c}a \approx 0.9057236643\\b \approx 1.000000000\end{array}$ \\
 	\hline
-	$n=7$ & $\begin{array}{c}a = 0.602364484\\b = 0.810875164\end{array}$ & $\begin{array}{c}a = 0.759214654\\b = 0.927626786\end{array}$ & $\begin{array}{c}a = 0.9170040432\\b = 1.000000000\end{array}$ \\
+	$n=7$ & $\begin{array}{c}a \approx 0.602364484\\b \approx 0.810875164\end{array}$ & $\begin{array}{c}a \approx 0.759214654\\b \approx 0.927626786\end{array}$ & $\begin{array}{c}a \approx 0.9170040432\\b \approx 1.000000000\end{array}$ \\
 	\hline
-	$n=8$ & $\begin{array}{c}a = 0.516121520\\b = 0.725980740\end{array}$ & $\begin{array}{c}a = 0.646917782\\b = 0.836946595\end{array}$ & $\begin{array}{c}a = 0.786238550\\b = 0.937733701\end{array}$ & $\begin{array}{c}a = 0.9258747123\\b = 1.000000000\end{array}$ \\
+	$n=8$ & $\begin{array}{c}a \approx 0.516121520\\b \approx 0.725980740\end{array}$ & $\begin{array}{c}a \approx 0.646917782\\b \approx 0.836946595\end{array}$ & $\begin{array}{c}a \approx 0.786238550\\b \approx 0.937733701\end{array}$ & $\begin{array}{c}a \approx 0.9258747123\\b \approx 1.000000000\end{array}$ \\
 	\hline
 \end{tabular}
 

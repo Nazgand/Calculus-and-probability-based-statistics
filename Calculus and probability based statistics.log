@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.2.17)  24 FEB 2016 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.2.17)  25 FEB 2016 00:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -239,7 +239,7 @@ Here is how much of TeX's memory you used:
  6137 multiletter control sequences out of 15000+600000
  9165 words of font info for 35 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 37i,13n,31p,400b,198s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,31p,460b,198s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2015/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2015/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2015/texmf-dist/fonts/type
@@ -254,8 +254,8 @@ e1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
 b><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Calculus and probability based statistics.pdf" (3 pages, 154
-817 bytes).
+Output written on "Calculus and probability based statistics.pdf" (3 pages, 155
+277 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
