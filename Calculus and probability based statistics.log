@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.2.17)  25 FEB 2016 00:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.2.17)  25 FEB 2016 00:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -222,12 +222,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )) [1{c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (105.16339pt too wide) in paragraph at lines 130--167
+Overfull \hbox (105.16339pt too wide) in paragraph at lines 131--168
 []
  []
 
 
-Overfull \hbox (12.58179pt too wide) in paragraph at lines 130--167
+Overfull \hbox (12.58179pt too wide) in paragraph at lines 131--168
 [] 
  []
 
@@ -255,7 +255,7 @@ amsfonts/cm/cmti7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
 b><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on "Calculus and probability based statistics.pdf" (3 pages, 155
-312 bytes).
+422 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
