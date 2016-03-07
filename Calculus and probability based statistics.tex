@@ -36,7 +36,7 @@ Marshalltown, Iowa, 50158
 }
 \email{MGerads11@winona.edu\\nazgand@gmail.com}
 \maketitle
-\section{Finite statistics}
+\section{Finite uniform statistics}
 \subsection{Introduction}
 The purpose of this text is to have statistics built on a solid foundation of probability and calculus.
 \definition{$A$ is an independently repeatable event.}
@@ -44,30 +44,44 @@ The purpose of this text is to have statistics built on a solid foundation of pr
 \definition{$n\in\mathbb{W}$ is the number of times $A$ had a chance to happen.}
 \definition{$k\in\mathbb{W}$ is the number of times $A$ actually happened.}
 \remark{$k\leq n$.}
-\definition{$f_p$ is the probability distribution for $p$.}
-\remark{\label{IntegrateToUnity}$1=\int_0^1 f_p \dd p$}
-\remark{$k/n$ is the expected probability of $p$ and is where the maximum value of the function $f_p$ is. }
+\definition{$f_p$ is the prior probability distribution for $p$. In the uniform statistics section, we assume $f_p=1$.}
+\remark{\label{IntegrateToUnity0}$1=\int_0^1 f_p \dd p$}
+\definition{$f_{p|n,k}$ is the updated probability distribution for $p$.
+\remark{\label{IntegrateToUnity1}$1=\int_0^1 f_{p|n,k} \dd p$}
+\remark{$k/n$ is the expected probability of $p$ and is where the maximum value of the function $f_{p|n,k}$ is. }
 \definition{$(a,b)$ is the confidence interval of $p$ such that $b-a$ is minimized.}
 \definition{$c$ is the desired certainty for the confidence interval of $p$.}
-\remark{$0\leq c=\int_a^b f_p \dd p\leq 1$}
+\remark{$0\leq c=\int_a^b f_{p|n,k} \dd p\leq 1$}
 \remark{$0\leq a\leq b\leq 1$}
 \remark{The symmetry mentioned is where you swap $p$ with $1-p$ and $k$ with $n-k$ and $A$ with $\lnot A$.}
 
-\subsection{The Problem}
+\subsection{The General Prior Probability Problem}
 $n,k,c$ are known, and we must solve for $a,b$.
-\remark{The probability of $k$ events given $n$ chances is $\binom{n}{k}p^k(1-p)^{n-k}$, but we must scale it to satisfy \ref{IntegrateToUnity}:
+\remark{The probability of $k$ events given $n$ chances is $\binom{n}{k}p^k(1-p)^{n-k}$, but we must scale it to satisfy \ref{IntegrateToUnity1}:
 \begin{equation}
-f_p
+f_{p|n,k}
 =\frac{\binom{n}{k}p^k(1-p)^{n-k}}{\int\limits_{0}^{1}\binom{n}{k}p^k(1-p)^{n-k}\dd p}
 =\frac{p^k(1-p)^{n-k}}{\int\limits_{0}^{1}p^k(1-p)^{n-k}\dd p}
 =(n+1)\binom{n}{k}p^k(1-p)^{n-k}
 \end{equation}
 }
+\subsection{The Uniform Prior Probability Problem}
+$n,k,c$ are known, and we must solve for $a,b$.
+\remark{The probability of $k$ events given $n$ chances is $\binom{n}{k}p^k(1-p)^{n-k}$, but we must scale it to satisfy \ref{IntegrateToUnity1}:
+	\begin{equation}
+	f_{p|n,k}
+	=\frac{\binom{n}{k}p^k(1-p)^{n-k}}{\int\limits_{0}^{1}\binom{n}{k}p^k(1-p)^{n-k}\dd p}
+	=\frac{p^k(1-p)^{n-k}}{\int\limits_{0}^{1}p^k(1-p)^{n-k}\dd p}
+	=(n+1)\binom{n}{k}p^k(1-p)^{n-k}
+	\end{equation}
+}
 \subsection{The 4 cases of finding the interval}
 
 \subsubsection{Case $n=k=0$}
-This case is self-symmetrical.
-\remark{We have \begin{equation}
+This case is can be self-symmetrical.
+\remark{We have the general solution \begin{equation}
+(a,b)=(a,a+0.5)
+\end{equation}, but the self-symmetric solution is \begin{equation}
 (a,b)=\left(\frac{1-c}{2},\frac{1+c}{2}\right)
 \end{equation}}
 
@@ -165,6 +179,20 @@ Table with $c=\frac{1}{2}$:\\
 	$n=8$ & $\begin{array}{c}a \approx 0.516121520\\b \approx 0.725980740\end{array}$ & $\begin{array}{c}a \approx 0.646917782\\b \approx 0.836946595\end{array}$ & $\begin{array}{c}a \approx 0.786238550\\b \approx 0.937733701\end{array}$ & $\begin{array}{c}a \approx 0.9258747123\\b \approx 1.000000000\end{array}$ \\
 	\hline
 \end{tabular}
+
+\section{The second trial and consistency}
+Suppose we had a first trial with $k_0$ events occurring out of $n_0$ chances to occur. Then the prior probability distribution would be:
+\begin{equation}
+f_{p}
+=(n_{0}+1)\binom{n_{0}}{k_{0}}p^{k_{0}}(1-p)^{n_{0}-k_{0}}
+\end{equation}
+The second trial has $k_1$ events occurring out of $n_1$ chances to occur. By treating both trials as a single, larger trial we can jump ahead to get this equation:
+\begin{equation}
+f_{p|n_{1},k_{1}}
+=(n_{0}+n_{1}+1)\binom{n_{0}+n_{1}}{k_{0}+k_{1}}
+p^{k_{0}+k_{1}}(1-p)^{n_{0}+n_{1}-k_{0}-k_{1}}
+\end{equation}
+We will also show this the long way.
 
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.2.17)  25 FEB 2016 00:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.2.17)  1 MAR 2016 21:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -222,40 +222,44 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )) [1{c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (105.16339pt too wide) in paragraph at lines 131--168
+Overfull \hbox (105.16339pt too wide) in paragraph at lines 145--182
 []
  []
 
 
-Overfull \hbox (12.58179pt too wide) in paragraph at lines 131--168
+Overfull \hbox (12.58179pt too wide) in paragraph at lines 145--182
 [] 
  []
 
-[2] [3] (./Calculus and probability based statistics.aux) ) 
+[2] [3] (./Calculus and probability based statistics.aux) )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 49 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 2784 strings out of 493033
- 35038 string characters out of 6137754
- 114640 words of memory out of 5000000
- 6137 multiletter control sequences out of 15000+600000
+ 2785 strings out of 493033
+ 35058 string characters out of 6137754
+ 115650 words of memory out of 5000000
+ 6138 multiletter control sequences out of 15000+600000
  9165 words of font info for 35 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 37i,13n,31p,460b,198s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2015/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi5.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi6.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2015/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
-b><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Calculus and probability based statistics.pdf" (3 pages, 155
-767 bytes).
+ 37i,13n,31p,460b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c
+:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2015/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><c:/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2015/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb>
+Output written on "Calculus and probability based statistics.pdf" (3 pages, 157
+974 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
